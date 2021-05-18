@@ -106,6 +106,10 @@ tasks {
         )
     }
 
+    runIde {
+        jvmArgs("--add-exports", "java.base/jdk.internal.vm=ALL-UNNAMED")
+    }
+
     runPluginVerifier {
         ideVersions(properties("pluginVerifierIdeVersions"))
     }
